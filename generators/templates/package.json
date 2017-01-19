@@ -1,0 +1,22 @@
+{
+  "name": "<%- projectName %>-review-service",
+  "description":"custom review-service derived from baseline",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "author": "KB.T",
+  "dependencies": {
+    "jsonschema": "^1.1.0",
+    "uuid-validate": "0.0.2",
+    "webpurify": "github:cbcaio/webpurify",
+    "js-yaml": "^3.7.0",
+    "chai": "^3.5.0",
+    "form-urlencoded": "^1.5.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "mocha": "^3.2.0",
+    "chai-as-promised": "^6.0.0",
+    "uuid": "^3.0.1"
+  }
+}

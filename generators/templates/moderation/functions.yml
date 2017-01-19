@@ -1,0 +1,18 @@
+moderation:
+  handler: <%- basePath %>/moderation/moderation.handler
+  memorySize: 128
+  environment:
+    HOST: 'api.crowdflower.com'
+    PORT: '80'
+    DYNAMO_DB: <%- projectName %>-moderation
+  events:
+    - sns: ingest
+moderation-webhook:
+  handler: <%- basePath %>/moderation/webhook.handler
+  memorySize: 128
+  environment:
+    DYNAMO_DB: <%- projectName %>-moderation
+  events:
+    - http:
+        path: moderation/hook
+        method: post

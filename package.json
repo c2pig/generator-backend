@@ -1,0 +1,16 @@
+{
+  "name": "generator-review-service-baseline",
+  "description": "",
+  "version": "1.0.3",
+  "scripts": {},
+  "author": "KB.T",
+  "main": "generators/index.js",
+  "dependencies": {
+    "jsonschema": "^1.1.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "uuid-validate": "0.0.2",
+    "webpurify": "github:cbcaio/webpurify",
+    "yeoman-generator": "^1.0.0"
+  }
+}

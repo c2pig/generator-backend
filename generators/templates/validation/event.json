@@ -1,0 +1,37 @@
+{
+  "key": "value",
+  "key2": "value2",
+  "other_key": "other_value",
+  "httpMethod" : "POST",
+  "body": {
+    "operation": "create-dev",
+    "payload": {
+      "courseName":"aaa",
+      "id": "8970bffa-eff9-4c1a-a048-161ff3976cc3",
+      "url": "https://ensino.catho.com.br/#/",
+      "deviceModel": "Desktop",
+      "systemName": "Linux",
+      "systemVersion": "x86_64",
+      "browserName": "Chrome",
+      "browserVersion": "53.0.2785.101",
+      "formVersion": "v2.0.7",
+      "providerId": 55,
+      "courseId": 2903,
+      "studyStatusYear": "Tranquei",
+      "studyStatusYearFinal": 1999,
+      "valuationCourseRating": 5,
+      "email": "volponi@teste.te",
+      "valuationRecommendation": "Não",
+      "courseExperienceAgree": "É difícil o conteúdo abortado neste curso|A metodologia deste curso é interessante e facilita o aprendizado|Este curso possui horários flexíveis|O que se aprende neste curso tem aplicação no trabalho|O conteúdo deste curso é relevante e atual|Este curso tem material didático de boa qualidade|As aulas deste curso são dinâmicas e práticas|As provas e trabalhos deste curso fortalecem o aprendizado|Os professores deste curso tem boa didática e experiência na área|A instituição deste curso oferece bom suporte aos alunos",
+      "studyPeriod": "Integral",
+      "courseAttendance": "Ambos",
+      "courseBenefits": "Ótima",
+      "courseFees": "Nenhuma bolsa",
+      "paymentValue": 9999,
+      "providerChoice": "Era uma das melhores opções",
+      "goodParts": "fuck hello how are you, testing , fuck",
+      "badParts": " fuck hello how are you doing? bitch\n\n",
+      "resumeTitle": "test test test test"
+		}
+	}
+}

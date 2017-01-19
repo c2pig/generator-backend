@@ -1,0 +1,9 @@
+validation:
+  handler: <%- basePath %>/validation/validation.handler
+  memorySize: 128
+  environment:
+    SNS_TOPIC: arn:aws:sns:<%- awsRegion %>:<%- awsAccountId %>:validation
+  events:
+    - http:
+        path: review
+        method: post

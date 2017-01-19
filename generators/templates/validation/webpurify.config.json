@@ -1,0 +1,15 @@
+{
+  "key": {
+    "api_key": "8266fc4da64bb51a577ea3699a9bb754",
+    "enterprise": false
+  },
+  "options": {
+    "lang": "us"
+  },
+  "timeoutInMs": 5000,
+  "verifyFields": [
+    "resumeTitle",
+    "goodParts",
+    "badParts"
+  ]
+}

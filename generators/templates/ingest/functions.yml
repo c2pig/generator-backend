@@ -1,0 +1,9 @@
+ingest:
+  memorySize: 128
+  handler: <%- basePath %>/ingest/ingest.handler
+  environment:
+    DYNAMO_DB: <%- projectName %>-ugc-review
+    S3_BUCKET: <%- projectName %>-ugc-review
+    SNS_TOPIC: arn:aws:sns:<%- awsRegion %>:<%- awsAccountId %>:ingest    
+  events:
+    - sns: validation

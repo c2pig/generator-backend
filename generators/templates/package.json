@@ -8,10 +8,11 @@
   "dependencies": {
     "jsonschema": "^1.1.0",
     "uuid-validate": "0.0.2",
-    "webpurify": "github:cbcaio/webpurify",
+    "webpurify": "1.0.1",
     "js-yaml": "^3.7.0",
     "chai": "^3.5.0",
-    "form-urlencoded": "^1.5.0"
+    "form-urlencoded": "^1.5.0",
+    "review-service-baseline": "0.0.3"
   },
   "devDependencies": {
     "babel": "^6.5.2",

@@ -10,7 +10,8 @@
     "mkdirp": "^0.5.1",
     "rimraf": "^2.5.4",
     "uuid-validate": "0.0.2",
-    "webpurify": "github:cbcaio/webpurify",
-    "yeoman-generator": "^1.0.0"
+    "webpurify": "1.0.1",
+    "yeoman-generator": "^1.0.0",
+    "review-service-baseline": "^0.0.5"
   }
 }

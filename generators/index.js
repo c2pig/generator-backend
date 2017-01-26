@@ -16,7 +16,7 @@ module.exports = Generator.extend({
       type    : 'input',
       name    : 'serviceName',
       message : 'Service name will be deployed',
-      default : "review-service"
+      default : "example-review-service"
     },
     {
       type    : 'input',
@@ -37,13 +37,16 @@ module.exports = Generator.extend({
       default : 'code'
     },
   ];
+
     return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
+      this.config.set(props);
       this.props = props;
     }.bind(this));
+
+    this.config.save();
   },
   configuring: function() {
-    this.composeWith(require.resolve('review-service-baseline/generators/app'),  this.props);
+    this.composeWith(require.resolve('review-service/generators/app'),  this.props);
   },
   writing: function () {
     let YAML = require('js-yaml');
@@ -55,7 +58,6 @@ module.exports = Generator.extend({
       'tmp/moderation.func.tmp' : 'serverless.yml',
       'tmp/view.func.tmp' : 'serverless.yml'
     };
-
 
     const contentMerge = (fromFile, toFile) => {
 
@@ -83,15 +85,31 @@ module.exports = Generator.extend({
       }).bind(this));
     }).bind(this);
 
-    fileOps(translatedTemplateMerge, partials);
+    //fileOps(translatedTemplateMerge, partials);
+
     console.log(`creating dir:${this.props.codeDir}`);
     mkdirp(this.props.codeDir||".");
   },
   install: function () {
-    console.log('clean up tmp/ ...');
-    rimraf("tmp/", (x) => {
-      if(x) {  console.log(x); }
-    });
+    let fs = require('fs');
+    this.fs.copy(this.destinationPath('tmp/**/*.tmp'), this.destinationPath('tmp-1/'),
+    {
+      process: (content) => {
+        fs.appendFile(this.destinationPath('serverless.yml'), content, (err) => {
+          if(err !== null) {
+            console.log(err);
+          }
+        });
+        return content;
+    }});
     this.installDependencies({bower:false, npm:true});
+  },
+  end: function() {
+    console.log('clean up tmp/ ...');
+    let done = (x) => {
+      if(x !== null) {  console.log(x); }
+    };
+    rimraf("tmp/", done);
+    rimraf("tmp-1/", done);
   }
 });

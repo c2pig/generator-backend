@@ -1,7 +1,7 @@
 {
-  "name": "generator-review-service-baseline",
+  "name": "generator-review-service",
   "description": "",
-  "version": "1.0.3",
+  "version": "0.0.3",
   "scripts": {},
   "author": "KB.T",
   "main": "generators/index.js",
@@ -12,6 +12,6 @@
     "uuid-validate": "0.0.2",
     "webpurify": "1.0.1",
     "yeoman-generator": "^1.0.0",
-    "review-service-baseline": "^0.0.5"
+    "review-service-base": "^0.0.1"
   }
 }

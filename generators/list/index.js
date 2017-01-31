@@ -32,7 +32,7 @@ module.exports = Generator.extend({
   writing: function () {
     let selection = this.props.features.pop(0);
     if(selection === "example") {
-      this.composeWith(require.resolve('review-service-baseline/generators/app'),  this.props);
+      this.composeWith(require.resolve('generator-gdp-backend/generators/app'),  this.props);
     } else if(selection === "cpp") {
 
     } else if(selection === "cain") {

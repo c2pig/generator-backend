@@ -46,7 +46,7 @@ module.exports = Generator.extend({
     this.config.save();
   },
   configuring: function() {
-    this.composeWith(require.resolve('review-service/generators/app'),  this.props);
+    this.composeWith(require.resolve('gdp-backend-base/generators/app'),  this.props);
   },
   writing: function () {
     let YAML = require('js-yaml');
@@ -84,8 +84,6 @@ module.exports = Generator.extend({
         action(path, dest);
       }).bind(this));
     }).bind(this);
-
-    //fileOps(translatedTemplateMerge, partials);
 
     console.log(`creating dir:${this.props.codeDir}`);
     mkdirp(this.props.codeDir||".");
